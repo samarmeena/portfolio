@@ -1,7 +1,8 @@
 import CommentIcon from "@/icons/CommentIcon";
 import EyeIcon from "@/icons/EyeIcon";
 import HeartIcon from "@/icons/HeartIcon";
-import styles from "@/styles/ArticleCard.module.css";
+
+import styles from "./article-card.module.css";
 
 const ArticleCard = ({ article }: { article: any }) => {
   return (

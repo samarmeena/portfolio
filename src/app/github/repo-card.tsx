@@ -3,7 +3,8 @@ import GithubIcon from "@/icons/GithubIcon";
 import LinkIcon from "@/icons/LinkIcon";
 import StarIcon from "@/icons/StarIcon";
 import WatchIcon from "@/icons/WatchIcon";
-import styles from "@/styles/RepoCard.module.css";
+
+import styles from "./repo-card.module.css";
 
 interface Props {
   repo: any;

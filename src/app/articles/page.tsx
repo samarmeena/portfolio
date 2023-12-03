@@ -1,7 +1,6 @@
-import styles from "@/styles/ArticlesPage.module.css";
-
 import { GetArticles } from "./api";
-import ArticleCard from "./ArticleCard";
+import ArticleCard from "./article-card";
+import styles from "./page.module.css";
 
 const ArticlesPage = async () => {
   const articles = await GetArticles();

@@ -3,9 +3,8 @@
 import Image from "next/image";
 import GitHubCalendar from "react-github-calendar";
 
-import styles from "@/styles/GithubPage.module.css";
-
 import RepoCard from "./repo-card";
+import styles from "./view.module.css";
 
 interface Props {
   repos: any;

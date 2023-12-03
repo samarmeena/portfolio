@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import styles from "@/styles/Titlebar.module.css";
+import styles from "./styles.module.css";
 
-const Titlebar = () => {
+const TitleBar = () => {
   return (
     <section className={styles.titlebar}>
       <Image
@@ -31,4 +31,4 @@ const Titlebar = () => {
   );
 };
 
-export default Titlebar;
+export default TitleBar;

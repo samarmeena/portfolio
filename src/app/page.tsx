@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 import Illustration from "@/icons/Illustration";
-import styles from "@/styles/HomePage.module.css";
+
+import styles from "./page.module.css";
 
 export default function HomePage() {
   return (

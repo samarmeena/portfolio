@@ -10,7 +10,8 @@ import GithubIcon from "@/icons/GithubIcon";
 import MailIcon from "@/icons/MailIcon";
 import PencilIcon from "@/icons/PencilIcon";
 import SettingsIcon from "@/icons/SettingsIcon";
-import styles from "@/styles/Sidebar.module.css";
+
+import styles from "./styles.module.css";
 
 const sidebarTopItems = [
   {

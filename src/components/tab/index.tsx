@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import styles from "@/styles/Tab.module.css";
+import styles from "./styles.module.css";
 
 interface Props {
   filename: string;

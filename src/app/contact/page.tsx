@@ -2,9 +2,8 @@
 
 import { FormEventHandler } from "react";
 
-import styles from "@/styles/ContactPage.module.css";
-
-import ContactCode from "./contact-page";
+import ContactCode from "./contact-code";
+import styles from "./page.module.css";
 import { SendEmail } from "./send-email";
 
 const ContactPage: React.FC = () => {

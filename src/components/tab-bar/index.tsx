@@ -1,8 +1,7 @@
-import styles from "@/styles/Tabsbar.module.css";
+import Tab from "../tab";
+import styles from "./styles.module.css";
 
-import Tab from "./Tab";
-
-const Tabsbar = () => {
+const TabBar = () => {
   return (
     <div className={styles.tabs}>
       <Tab icon="/react_icon.svg" filename="home.jsx" path="/" />
@@ -15,4 +14,4 @@ const Tabsbar = () => {
   );
 };
 
-export default Tabsbar;
+export default TabBar;

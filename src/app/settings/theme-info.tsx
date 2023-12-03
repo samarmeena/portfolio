@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import styles from "@/styles/ThemeInfo.module.css";
+import styles from "./theme-info.module.css";
 
 interface Props {
   description: string;

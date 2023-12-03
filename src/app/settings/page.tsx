@@ -1,5 +1,4 @@
-import styles from "@/styles/SettingsPage.module.css";
-
+import styles from "./page.module.css";
 import ThemeInfo from "./theme-info";
 
 const SettingsPage = () => {
