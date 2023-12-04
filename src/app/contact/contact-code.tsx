@@ -3,7 +3,7 @@ import styles from "./contact-code.module.css";
 const contactItems = [
   {
     social: "website",
-    link: "samarmeena.github.io",
+    link: "vijay.infracia.com",
     href: "https://samarmeena.github.io",
   },
   {
@@ -20,6 +20,16 @@ const contactItems = [
     social: "dev.to",
     link: "samarmeena",
     href: "https://dev.to/samarmeena",
+  },
+  {
+    social: "discord",
+    link: "_samar_",
+    href: "https://discord.com/channels/@me",
+  },
+  {
+    social: "whatsapp",
+    link: "click here",
+    href: "https://wa.me/+919001296901",
   },
 ];
 
