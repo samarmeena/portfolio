@@ -1,13 +1,13 @@
 import { GetProjects } from "./api";
 import ProjectCard from "./project-card";
 
-const ProjectsPage: React.FC = async () => {
-  const projects = await GetProjects();
+const ProjectsPage: React.FC = () => {
+  const projects = GetProjects();
 
   return (
     <>
       <h3>{"Stuff I've Built So Far"}</h3>
-      <div className="grid my-6 gap-6 grid-cols-[repeat(4,minmax(240px,1fr))]">
+      <div className="grid md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] my-6 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

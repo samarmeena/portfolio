@@ -53,7 +53,9 @@ const Explorer = () => {
           className={styles.checkbox}
           id="portfolio-checkbox"
           checked={portfolioOpen}
-          onChange={() => setPortfolioOpen(!portfolioOpen)}
+          onChange={() => {
+            setPortfolioOpen(!portfolioOpen);
+          }}
         />
         <label htmlFor="portfolio-checkbox" className={styles.heading}>
           <ChevronRight

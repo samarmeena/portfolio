@@ -1,6 +1,7 @@
+import "./page.css";
+
 import { GetArticles } from "./api";
 import ArticleCard from "./article-card";
-import styles from "./page.module.css";
 
 const ArticlesPage = async () => {
   const articles = await GetArticles();
@@ -13,13 +14,13 @@ const ArticlesPage = async () => {
           href="https://dev.to/samarmeena"
           target="_blank"
           rel="noopener"
-          className={styles.underline}
+          className="underline-effect"
         >
           dev.to
         </a>
       </h3>
-      <div className={styles.container}>
-        {articles.map((article: any) => (
+      <div className="grid md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-6 mt-6">
+        {articles.map((article) => (
           <ArticleCard key={article.id} article={article} />
         ))}
       </div>

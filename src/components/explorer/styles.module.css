@@ -64,12 +64,6 @@
 
 @media screen and (max-width: 900px) {
   .explorer {
-    width: 20vw;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .explorer {
     display: none;
   }
 }

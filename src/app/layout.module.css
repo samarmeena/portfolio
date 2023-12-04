@@ -10,7 +10,7 @@
   color: var(--text-color);
   font-family: "JetBrains Mono", monospace;
   flex: 1;
-  height: 85vh;
+  height: calc(100vh - 95px);
   overflow-y: auto;
   scroll-behavior: smooth;
 }

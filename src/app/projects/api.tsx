@@ -2,6 +2,6 @@ import data from "./projects.json";
 
 export type Project = (typeof data)[number];
 
-export async function GetProjects() {
+export function GetProjects() {
   return data;
 }

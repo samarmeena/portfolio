@@ -3,7 +3,7 @@
 .container {
   display: flex;
   justify-content: center;
-  height: 75vh;
+  height: 100%;
   flex-direction: column;
   position: relative;
 }

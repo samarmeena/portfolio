@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Project } from "./api";
+import type { Project } from "./api";
 import styles from "./project-card.module.css";
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {

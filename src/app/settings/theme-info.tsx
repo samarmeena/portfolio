@@ -26,7 +26,13 @@ const ThemeInfo: React.FC<Props> = ({ icon, name, publisher, theme }) => {
           <h3>{name}</h3>
           <h5>{publisher}</h5>
         </div>
-        <button onClick={() => setTheme(theme)}>Set Color Theme</button>
+        <button
+          onClick={() => {
+            setTheme(theme);
+          }}
+        >
+          Set Color Theme
+        </button>
       </div>
     </div>
   );

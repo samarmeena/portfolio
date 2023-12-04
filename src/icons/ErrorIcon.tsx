@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 
 const ErrorIcon: React.FC<SVGProps<SVGSVGElement>> = (props) => {
   return (

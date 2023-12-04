@@ -3,12 +3,13 @@
 import Image from "next/image";
 import GitHubCalendar from "react-github-calendar";
 
+import type { IGitHubRepo, IGitHubUser } from "./api.types";
 import RepoCard from "./repo-card";
 import styles from "./view.module.css";
 
 interface Props {
-  repos: any;
-  user: any;
+  repos: IGitHubRepo[];
+  user: IGitHubUser;
 }
 
 const GithubPageView: React.FC<Props> = ({ user, repos }) => {
@@ -37,7 +38,7 @@ const GithubPageView: React.FC<Props> = ({ user, repos }) => {
         </div>
       </div>
       <div className={styles.container}>
-        {repos.map((repo: any) => (
+        {repos.map((repo) => (
           <RepoCard key={repo.id} repo={repo} />
         ))}
       </div>

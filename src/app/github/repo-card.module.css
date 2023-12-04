@@ -1,18 +1,14 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @apply flex flex-col justify-between rounded p-4;
   background: var(--article-bg);
-  border-radius: 5px;
-  padding: 1rem;
 }
 
 .card:hover {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  @apply shadow shadow-black/25;
 }
 
 .card p {
-  margin-bottom: 1.25rem;
+  @apply mb-5;
 }
 
 .title {

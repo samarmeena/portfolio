@@ -1,36 +1,37 @@
 "use client";
 
-import { FormEventHandler } from "react";
+import type { FormEventHandler } from "react";
 
 import ContactCode from "./contact-code";
 import styles from "./page.module.css";
 import { SendEmail } from "./send-email";
 
 const ContactPage: React.FC = () => {
-  const submitForm: FormEventHandler<HTMLFormElement> = async (e) => {
+  const submitForm: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    try {
-      const data = new FormData(e.currentTarget);
+    const data = new FormData(e.currentTarget);
 
-      const name = data.get("name")?.toString();
-      const email = data.get("email")?.toString();
-      const subject = data.get("subject")?.toString();
-      const message = data.get("message")?.toString();
-      if (!name || !email || !subject || !message) {
-        throw Error("All field required");
-      }
-
-      await SendEmail({
-        name,
-        email,
-        subject,
-        message,
-      });
-
-      alert("Your response has been received!");
-    } catch (err) {
-      alert("There was an error. Please try again in a while.");
+    const name = data.get("name")?.toString();
+    const email = data.get("email")?.toString();
+    const subject = data.get("subject")?.toString();
+    const message = data.get("message")?.toString();
+    if (!name || !email || !subject || !message) {
+      alert("All field required");
+      return;
     }
+
+    SendEmail({
+      name,
+      email,
+      subject,
+      message,
+    })
+      .then(() => {
+        alert("Your response has been received!");
+      })
+      .catch(() => {
+        alert("There was an error. Please try again in a while.");
+      });
   };
 
   return (

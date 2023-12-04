@@ -1,5 +1,7 @@
 "use server";
 
+import type { IArticle } from "./api.types";
+
 export async function GetArticles() {
   if (!process.env.DEV_TO_API_KEY) {
     throw Error("env DEV_TO_API_KEY does not exist");
@@ -14,7 +16,7 @@ export async function GetArticles() {
     },
   );
 
-  const data = await res.json();
+  const data = (await res.json()) as IArticle[];
 
   return data;
 }

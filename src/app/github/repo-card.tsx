@@ -4,10 +4,11 @@ import LinkIcon from "@/icons/LinkIcon";
 import StarIcon from "@/icons/StarIcon";
 import WatchIcon from "@/icons/WatchIcon";
 
+import type { IGitHubRepo } from "./api.types";
 import styles from "./repo-card.module.css";
 
 interface Props {
-  repo: any;
+  repo: IGitHubRepo;
 }
 
 const RepoCard: React.FC<Props> = ({ repo }) => {

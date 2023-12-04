@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import type { SVGProps } from "react";
 
 const LinkIcon: React.FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
