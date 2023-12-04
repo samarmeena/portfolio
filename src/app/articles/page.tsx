@@ -1,5 +1,3 @@
-import "./page.css";
-
 import { GetArticles } from "./api";
 import ArticleCard from "./article-card";
 
@@ -19,7 +17,7 @@ const ArticlesPage = async () => {
           dev.to
         </a>
       </h3>
-      <div className="grid md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-6 mt-6">
+      <div className="mt-6 grid gap-6 md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
         {articles.map((article) => (
           <ArticleCard key={article.id} article={article} />
         ))}

@@ -10,6 +10,6 @@ Email: vijayymmeena@gmail.com
 
 # Credits
 
-Template by: [itsnitinr](https://github.com/itsnitinr/vscode-portfolio)
+Inspired by: [itsnitinr](https://github.com/itsnitinr/vscode-portfolio)
 
 # Thank you

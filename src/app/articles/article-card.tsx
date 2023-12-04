@@ -10,25 +10,25 @@ const ArticleCard = ({ article }: { article: IArticle }) => {
       href={article.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col no-underline text-white transition-all duration-300 p-3 rounded hover:shadow-md hover:shadow-black bg-[var(--article-bg)]"
+      className="flex flex-col rounded bg-[var(--article-bg)] p-3 text-white no-underline transition-all duration-300 hover:shadow hover:shadow-black"
     >
       <div className="px-0 py-4">
-        <h3 className="text-[color:var(--accent-color)] text-lg mb-4">
+        <h3 className="mb-4 text-lg text-[color:var(--accent-color)]">
           {article.title}
         </h3>
         <p>{article.description}</p>
       </div>
-      <div className="flex text-[1] mt-auto">
-        <div className="flex items-center mr-4">
-          <EyeIcon className="text-[color:var(--accent-color)] h-4 w-6 mr-1" />{" "}
+      <div className="mt-auto flex text-[1]">
+        <div className="mr-4 flex items-center">
+          <EyeIcon className="mr-1 h-4 w-6 text-[color:var(--accent-color)]" />{" "}
           {article.page_views_count}
         </div>
-        <div className="flex items-center mr-4">
-          <HeartIcon className="text-[color:var(--accent-color)] h-4 w-6 mr-1" />{" "}
+        <div className="mr-4 flex items-center">
+          <HeartIcon className="mr-1 h-4 w-6 text-[color:var(--accent-color)]" />{" "}
           {article.public_reactions_count}
         </div>
-        <div className="flex items-center mr-4">
-          <CommentIcon className="text-[color:var(--accent-color)] h-4 w-6 mr-1" />{" "}
+        <div className="mr-4 flex items-center">
+          <CommentIcon className="mr-1 h-4 w-6 text-[color:var(--accent-color)]" />{" "}
           {article.comments_count}
         </div>
       </div>

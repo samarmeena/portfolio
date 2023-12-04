@@ -1,9 +1,8 @@
-"use client";
-
 import Image from "next/image";
-import GitHubCalendar from "react-github-calendar";
+import { Suspense } from "react";
 
 import type { IGitHubRepo, IGitHubUser } from "./api.types";
+import GitHubCalendarView from "./calender";
 import RepoCard from "./repo-card";
 import styles from "./view.module.css";
 
@@ -44,11 +43,9 @@ const GithubPageView: React.FC<Props> = ({ user, repos }) => {
       </div>
       <div className="max-lg:hidden">
         <div className={styles.contributions}>
-          <GitHubCalendar
-            username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
-            hideColorLegend
-            hideMonthLabels
-          />
+          <Suspense>
+            <GitHubCalendarView />
+          </Suspense>
         </div>
       </div>
     </>

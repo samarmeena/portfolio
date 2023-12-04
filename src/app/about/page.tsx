@@ -16,15 +16,15 @@ const AboutPage: React.FC = () => {
         landscape.
       </h3>
       <section>
-        <h1 className="text-xl font-bold pb-2">Education</h1>
+        <h1 className="pb-2 text-2xl font-bold">Education</h1>
         <p>
           Graduated with a degree in Computer Science Engineering, completed
           between 2016-2018.
         </p>
       </section>
       <section>
-        <h1 className="text-xl font-bold pb-2">Work Experience</h1>
-        <ul className="[&>li]:p-2">
+        <h1 className="pb-2 text-2xl font-bold">Work Experience</h1>
+        <ul className="space-y-2">
           <li>Duration: 7 years total in development.</li>
           <li>
             Recent Roles: For the past two years, you have been working in a
@@ -34,8 +34,8 @@ const AboutPage: React.FC = () => {
         </ul>
       </section>
       <section>
-        <h1 className="text-xl font-bold pb-2">Specialization</h1>
-        <ul className="[&>li]:p-2">
+        <h1 className="pb-2 text-2xl font-bold">Specialization</h1>
+        <ul className="space-y-2">
           <li>
             Primary Role: Full Stack Developer and Cloud Server Administrator.
           </li>
@@ -45,8 +45,8 @@ const AboutPage: React.FC = () => {
         </ul>
       </section>
       <section>
-        <h1 className="text-xl font-bold pb-2">Strengths</h1>
-        <ul className="[&>li]:p-2">
+        <h1 className="pb-2 text-2xl font-bold">Strengths</h1>
+        <ul className="space-y-2">
           <li>Expertise in managing complex projects from start to finish.</li>
           <li>Ensuring solutions are robust, scalable, and efficient.</li>
           <li>Committed to driving innovation and excellence in technology.</li>

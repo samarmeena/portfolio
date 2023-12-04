@@ -5,7 +5,6 @@ import StarIcon from "@/icons/StarIcon";
 import WatchIcon from "@/icons/WatchIcon";
 
 import type { IGitHubRepo } from "./api.types";
-import styles from "./repo-card.module.css";
 
 interface Props {
   repo: IGitHubRepo;
@@ -13,30 +12,41 @@ interface Props {
 
 const RepoCard: React.FC<Props> = ({ repo }) => {
   return (
-    <div className={styles.card}>
+    <div className="flex flex-col justify-between rounded bg-[var(--article-bg)] p-4 hover:shadow hover:shadow-black">
       <div>
-        <h3 className={styles.title}>{repo.name}</h3>
-        <p>{repo.description}</p>
+        <h3 className="mb-4 text-[var(--accent-color)]">{repo.name}</h3>
+        <p className="mb-5">{repo.description}</p>
       </div>
-      <div className={styles.stats}>
-        <div>
-          <div>
-            <WatchIcon className={styles.icon} /> {repo.watchers}
-          </div>
-          <div>
-            <ForkIcon className={styles.icon} /> {repo.forks}
-          </div>
-          <div>
-            <StarIcon className={styles.icon} /> {repo.stargazers_count}
-          </div>
+      <div className="flex justify-between">
+        <div className="flex items-center [&>*]:mr-1 [&>span]:mr-4">
+          <>
+            <WatchIcon className="text-[var(--accent-color)]" />
+            <span>{repo.watchers}</span>
+          </>
+          <>
+            <ForkIcon className="text-[var(--accent-color)]" />
+            <span>{repo.forks}</span>
+          </>
+          <>
+            <StarIcon className="text-[var(--accent-color)]" />
+            <span>{repo.stargazers_count}</span>
+          </>
         </div>
-        <div>
+        <div className="flex items-center space-x-2">
           <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-            <GithubIcon height={20} width={20} className={styles.icon} />
+            <GithubIcon
+              height={20}
+              width={20}
+              className="text-[var(--accent-color)]"
+            />
           </a>
           {repo.homepage && (
             <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
-              <LinkIcon height={20} width={20} className={styles.icon} />
+              <LinkIcon
+                height={20}
+                width={20}
+                className="text-[var(--accent-color)]"
+              />
             </a>
           )}
         </div>
