@@ -3,8 +3,8 @@ import styles from "./contact-code.module.css";
 const contactItems = [
   {
     social: "website",
-    link: "vijay.infracia.com",
-    href: "https://samarmeena.github.io",
+    link: "samarmeena.vercel.app",
+    href: "https://samarmeena.vercel.app",
   },
   {
     social: "email",
