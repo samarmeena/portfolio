@@ -6,16 +6,23 @@ export default async function GetGitHub() {
   const userRes = await fetch(
     `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
   );
+
   const user = (await userRes.json()) as IGitHubUser;
 
-  const repoRes = await fetch(
+  const personalRepoRes = await fetch(
     `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?per_page=100`,
   );
 
-  let repos = (await repoRes.json()) as IGitHubRepo[];
-  repos = repos
-    .sort((a, b) => b.stargazers_count - a.stargazers_count)
-    .slice(0, 6);
+  const personalRepo = (await personalRepoRes.json()) as IGitHubRepo[];
+
+  const discordxRepoRes = await fetch(
+    `https://api.github.com/users/discordx-ts/repos?per_page=100`,
+  );
+
+  const discordxRepo = (await discordxRepoRes.json()) as IGitHubRepo[];
+
+  let repos = personalRepo.concat(discordxRepo);
+  repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
   return { user, repos };
 }
